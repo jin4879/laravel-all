@@ -11,6 +11,7 @@ services:
     restart: unless-stopped
     tty: true
     environment:
+      TZ: "Asia/Seoul"
       SERVICE_NAME: app
       SERVICE_TAGS: dev
     working_dir: /var/www
@@ -30,6 +31,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      TZ: "Asia/Seoul"
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
@@ -49,6 +52,7 @@ services:
       MYSQL_ROOT_PASSWORD: laravel
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+      TZ: "Asia/Seoul"
     volumes:
       - dbdata:/var/lib/mysql/
       - ./mysql/my.cnf:/etc/mysql/my.cnf
