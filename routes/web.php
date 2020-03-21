@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['Logging'])->group(function(){
+Route::middleware(['Logging'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 
-    Route::middleware(['RedirectLoggedIn'])->group(function () {
+    Route::middleware(['RedirectLoggedIn'])->namespace('Auth')->group(function () {
         Route::get('login', 'LoginController@loginForm')->name('loginForm');
         Route::post('login', 'LoginController@lgoin')->name('login');
+
+        Route::get('join', 'JoinController@joinForm')->name('joinForm');
+        Route::post('join', 'JoinController@join')->name('join');
     });
 });
