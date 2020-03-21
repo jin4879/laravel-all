@@ -1,23 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+<div>
+    <section>
+        <header><h2>첫번째 섹션 제목</h2></header>
+        <div>첫번째 섹션</div>
+    </section>
+    <section>
+        <header><h2>두번째 섹션 제목</h2></header>
+        <div>두번째 섹션</div>
+    </section>
 </div>
 @endsection

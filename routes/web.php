@@ -12,21 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::middleware(['Logging'])->group(function(){
-//    Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@index')->name('home');
 
     Route::middleware(['RedirectLoggedIn'])->group(function () {
-//        Route::get('join', 'JoinController@joinForm')->name('join');
-//        Route::post('join', 'JoinController@registerUser');
-
         Route::get('login', 'LoginController@loginForm')->name('loginForm');
+        Route::post('login', 'LoginController@lgoin')->name('login');
     });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
