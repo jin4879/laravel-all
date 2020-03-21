@@ -5,5 +5,7 @@
         <div id="app">
             @yield('content')
         </div>
+        @include('layouts.partial.modals')
+        @include('layouts.partial.js')
     </body>
 </html>

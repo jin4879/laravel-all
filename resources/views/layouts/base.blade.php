@@ -14,5 +14,8 @@
                 footer
             </footer>
         </div>
+
+        @include('layouts.partial.modals')
+        @include('layouts.partial.js')
     </body>
 </html>

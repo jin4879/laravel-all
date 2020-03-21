@@ -13,6 +13,7 @@
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
                         <form method="POST" class="register-form" id="register-form">
+                            @csrf
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -23,11 +24,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                <input type="password" name="password" id="pass" placeholder="Password"/>
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                <input type="password" name="password_confirmation" id="re_pass" placeholder="Repeat your password"/>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"/>
@@ -48,3 +49,25 @@
         </section>
     </main>
 @endsection
+
+@push('scripts')
+    <script>
+        $(function () {
+            $('#register-form').on('submit', function (event) {
+                event.preventDefault();
+                $.post('{{route('join')}}', $(this).serialize())
+                    .done(function (res) {
+                        console.log(res);
+                    })
+                    .fail(function (res) {
+                        console.log(res);
+                    })
+                    .always(function (res) {
+                        // console.log(res);
+                    });
+            });
+        });
+    </script>
+@endpush
+
+

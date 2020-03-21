@@ -321,10 +321,6 @@ body {
   -ms-transform: translate(-50%, -50%);
 }
 
-.signup {
-  margin-bottom: 150px;
-}
-
 .signup-content {
   padding: 75px 0;
 }
@@ -659,6 +655,10 @@ label.valid:after {
 }
 
 @media screen and (max-width: 768px) {
+  .main {
+    padding: 20px 0;
+  }
+
   .signup-content,
   .signin-content {
     flex-direction: column;
