@@ -40,14 +40,12 @@ figure {
 }
 .signup-image-link {
     font-size: 14px;
-    color: $black-color;
     display: block;
     text-align: center;
 }
 
 .term-service {
     font-size: 13px;
-    color: $black-color;
 }
 .signup-form {
     margin-left: 75px;
@@ -60,7 +58,10 @@ figure {
 .form-group {
     position: relative;
     margin-bottom: 25px;
-    overflow: hidden;
+    //overflow: hidden;
+    .alert-danger{
+        top:1px;
+    }
     &:last-child {
         margin-bottom: 0px;
     }
@@ -250,4 +251,6 @@ label.valid {
     margin-right: 20px;
     margin-top: 10px;
 }
-  
+.modal-body{
+    font-size: medium;
+}
