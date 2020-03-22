@@ -26,15 +26,14 @@
 
 //end 1024px
 @media screen and (max-width: 992px) {
-    
+    .main{
+        padding: 20px 0;
+    }
 }
 
 //end 992px
 @media screen and (max-width: 768px) {
 
-    .main{
-        padding: 20px 0;
-    }
 
     .signup-content, .signin-content {
         @include flex-direction(column);

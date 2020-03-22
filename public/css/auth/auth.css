@@ -659,11 +659,13 @@ label.valid:after {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .main {
     padding: 20px 0;
   }
+}
 
+@media screen and (max-width: 768px) {
   .signup-content,
   .signin-content {
     flex-direction: column;
