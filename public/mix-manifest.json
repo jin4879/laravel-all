@@ -1,5 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/auth/auth.css": "/css/auth/auth.css"
+    "/css/auth/auth.css": "/css/auth/auth.css",
+    "/css/layout/layouts.css": "/css/layout/layouts.css",
+    "/js/common/common.js": "/js/common/common.js",
+    "/css/home/home.css": "/css/home/home.css"
 }

@@ -1,0 +1,46 @@
+.header-wrapper {
+  background-color: #3b4348;
+
+  .container {
+    @extend display-flex;
+    @include align-items(center);
+
+    min-height: 65px;
+    flex-wrap: wrap;
+
+    .logo-container {
+
+    }
+
+    .header-nav {
+      margin-left: auto;
+
+      ul {
+        @extend display-flex;
+        @extend list-type-ulli;
+
+        li {
+          h3{
+            @extend display-flex;
+          }
+          a {
+            padding: 23px;
+            color: #c1cad1;
+            font-size: 20px;
+          }
+
+          a:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+
+        ul {
+          display: none;
+        }
+      }
+
+    }
+  }
+}
+

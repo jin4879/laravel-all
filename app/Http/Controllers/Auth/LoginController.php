@@ -11,9 +11,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+
+    protected $redirectTo = RouteServiceProvider::HOME;
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
     public function loginForm()
     {
         return view('auth.login');
@@ -43,10 +54,10 @@ class LoginController extends Controller
         $user = User::where('email', $credentials['email'])->first();
         if ($user === null) {
             $errors = new MessageBag(['email' => ['존재하지 않는 이메일 입니다.']]);
-            return response()->json($errors->messages(), 422);
         } else {
             $errors = new MessageBag(['password' => ['비밀번호가 틀렸습니다.']]);
-            return response()->json($errors->messages(), 422);
         }
+
+        return response()->json($errors->messages(), 422);
     }
 }

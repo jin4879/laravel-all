@@ -1,0 +1,126 @@
+/* @extend display-flex; */
+
+display-flex,
+.header-wrapper .container .header-nav ul li h3,
+.header-wrapper .container .header-nav ul,
+.header-wrapper .container,
+.display-flex-center,
+.display-flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+/* @extend list-type-ulli; */
+
+list-type-ulli,
+.header-wrapper .container .header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #6f7579;
+  background-color: white;
+}
+
+.w-5 {
+  width: 5% !important;
+}
+
+.w-10 {
+  width: 10% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.container {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.display-flex {
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+}
+
+.display-flex-center {
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+}
+
+.header-wrapper {
+  background-color: #3b4348;
+}
+
+.header-wrapper .container {
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  min-height: 65px;
+  flex-wrap: wrap;
+}
+
+.header-wrapper .container .header-nav {
+  margin-left: auto;
+}
+
+.header-wrapper .container .header-nav ul li a {
+  padding: 23px;
+  color: #c1cad1;
+  font-size: 20px;
+}
+
+.header-wrapper .container .header-nav ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-wrapper .container .header-nav ul ul {
+  display: none;
+}
+

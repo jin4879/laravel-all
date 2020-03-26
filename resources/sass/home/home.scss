@@ -1,0 +1,135 @@
+//Common
+@import '../common/extend';
+@import "../common/fonts";
+@import '../common/minxi';
+@import '../common/variables';
+@import '../common/global';
+
+.search-area-wrapper {
+  background: #353b65 url(/images/bg-01.jpg?2f91a8c…) center top no-repeat;
+  background-size: auto;
+
+  .container {
+    @extend display-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+
+    h3 {
+      font-weight: bold;
+      font-size: 36px;
+      color: #fff;
+      margin: 15px 0;
+    }
+
+    p {
+      font-family: "Awesome Droid", serif;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 28px;
+      color: #fff;
+      margin: 0 0 40px;
+    }
+
+    form {
+      width: 100%;
+      text-align: center;
+
+      input.search-term {
+        font-size: 14px;
+        height: 50px;
+        line-height: 24px;
+        padding: 12px;
+        width: 72%;
+        color: #858c91;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+
+      input.search-btn {
+        background-color: #3f4b55;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 600;
+        padding: 14px 30px 15px;
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        box-shadow: none;
+        border-radius: 0;
+        display: inline-block;
+        border: none;
+        vertical-align: bottom;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.page-area-wrapper {
+  .container {
+    padding: 55px 10px;
+    @extend display-flex;
+
+    .section-wrapper {
+      width: 70%;
+      @extend display-flex;
+
+      section {
+        width: 50%;
+
+        h3 {
+          font-family: "Awesome Sans", "Open Sans", sans-serif;
+          font-weight: 600;
+          margin-bottom: 30px;
+          font-size: 20px;
+          color: #3b4348;
+        }
+
+        ul {
+          @extend list-type-ulli;
+          padding: 0 30px 0 0;
+          li {
+            position: relative;
+            border-bottom: 1px solid #f2f2f2;
+            h4 {
+              font-size: 13px;
+              margin: 10px 0 5px;
+              font-weight: 600;
+              line-height: 22px;
+              a {
+                color: #3b4348;
+              }
+
+              a:hover{
+                color: #395996;
+              }
+            }
+
+            p {
+              padding: 0 0 0 21px;
+              margin: 0 0 10px;
+              span.like-count{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                line-height: 18px;
+                font-weight: 600;
+                padding: 3px 5px;
+                border: 1px solid #f2f2f2;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    aside {
+      width: 30%;
+    }
+  }
+}
+
+
+@import 'responsive';
