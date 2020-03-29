@@ -1,9 +1,9 @@
 /* @extend display-flex; */
 
 display-flex,
-.header-wrapper .container .header-nav ul li h3,
-.header-wrapper .container .header-nav ul,
-.header-wrapper .container,
+header.common-header .container .header-nav ul li h3,
+header.common-header .container .header-nav ul,
+header.common-header .container,
 .display-flex-center,
 .display-flex {
   display: flex;
@@ -13,7 +13,7 @@ display-flex,
 /* @extend list-type-ulli; */
 
 list-type-ulli,
-.header-wrapper .container .header-nav ul {
+header.common-header .container .header-nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -91,11 +91,11 @@ a:hover {
   -ms-align-items: center;
 }
 
-.header-wrapper {
+header.common-header {
   background-color: #3b4348;
 }
 
-.header-wrapper .container {
+header.common-header .container {
   align-items: center;
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -105,22 +105,22 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.header-wrapper .container .header-nav {
+header.common-header .container .header-nav {
   margin-left: auto;
 }
 
-.header-wrapper .container .header-nav ul li a {
+header.common-header .container .header-nav ul li a {
   padding: 23px;
   color: #c1cad1;
   font-size: 20px;
 }
 
-.header-wrapper .container .header-nav ul li a:hover {
+header.common-header .container .header-nav ul li a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-.header-wrapper .container .header-nav ul ul {
+header.common-header .container .header-nav ul ul {
   display: none;
 }
 
