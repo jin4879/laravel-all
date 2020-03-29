@@ -109,16 +109,16 @@
             p {
               padding: 0 0 0 21px;
               margin: 0 0 10px;
-              span.like-count{
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                line-height: 18px;
-                font-weight: 600;
-                padding: 3px 5px;
-                border: 1px solid #f2f2f2;
-                border-bottom: none;
-              }
+            }
+            span.like-count{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              line-height: 18px;
+              font-weight: 600;
+              padding: 3px 5px;
+              border: 1px solid #f2f2f2;
+              border-bottom: none;
             }
           }
         }
@@ -127,6 +127,73 @@
 
     aside {
       width: 30%;
+
+      .widget{
+        .support-widget{
+          border: 1px solid #e9e6c4;
+          padding: 10px 100px 10px 20px;
+          background: #fefbdc url(images/support/support.png) no-repeat 95% 20px;
+          margin-bottom: 20px;
+
+          h3.title{
+            font-weight: 500;
+            font-size: 20px;
+            color: #3b4348;
+            line-height: 44px;
+          }
+
+          p.intro{
+            font-family: "Open Sans", sans-serif;
+            font-size: 13px;
+            line-height: 22px;
+            color: #6f7579;
+          }
+        }
+
+        .quick-links-widget{
+          border: 1px solid #d7d9dc;
+          padding: 10px 15px 15px;
+
+          h3.title{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 44px;
+            color: #3b4348;
+          }
+
+          ul.menu{
+            @extend list-type-ulli;
+            @extend display-flex;
+            flex-wrap: wrap;
+            li{
+              flex-basis: 50%;
+              padding: 5px 5px 5px 20px;
+              background: url(/images/arrow/li-arrow.png) no-repeat 8px 13px;
+              a{
+                color: #3b4348;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        .tags-widget{
+
+          h3.title{
+            font-weight: 500;
+            font-size: 20px;
+            color: #3b4348;
+            line-height: 44px;
+          }
+
+          .tag-cloud{
+            a{
+              margin: 3px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
     }
   }
 }

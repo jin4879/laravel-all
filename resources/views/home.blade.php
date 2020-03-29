@@ -21,34 +21,34 @@
         <div class="container">
             <div class="section-wrapper">
                 <section class="articles-list">
-                    <h3>Featured Articles</h3>
+                    <h3>Popular Articles</h3>
                     <ul class="articles">
-                        @foreach([1,2,3,4,5,6] as $item)
+                        @foreach($popular_board as $item)
                             <li>
                                 <h4 class="ellipsis">
-                                    <i class='fas fa-video mr-2'></i><a href="#">Integrating WordPress with Your Website</a>
+                                    <i class='fas fa-video mr-2'></i><a href="#">{{$item->title}}</a>
                                 </h4>
                                 <p>
-                                    <span class="article-meta">25 Feb, 2013 in</span>
+                                    <span class="article-meta">{{\Carbon\Carbon::parse($item->updated_at)->format('d M, Y')}} in</span>
                                     <a href="#">Server &amp; Database</a>
-                                    <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>77</span>
                                 </p>
+                                <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>{{$item->view_count}}</span>
                             </li>
                         @endforeach
                     </ul>
                 </section>
                 <section class="articles-list">
-                    <h3>Featured Articles</h3>
+                    <h3>Latest Articles</h3>
                     <ul class="articles">
-                        @foreach([1,2,3,4,5,6] as $item)
+                        @foreach($latest_board as $item)
                             <li>
                                 <h4 class="ellipsis">
-                                    <i class='fas fa-video mr-2'></i><a href="#">Integrating WordPress with Your Website</a>
+                                    <i class='fas fa-video mr-2'></i><a href="#">{{$item->title}}</a>
                                 </h4>
                                 <p>
-                                    <span class="article-meta">25 Feb, 2013 in</span>
+                                    <span class="article-meta">{{\Carbon\Carbon::parse($item->updated_at)->format('d M, Y')}} in</span>
                                     <a href="#">Server &amp; Database</a>
-                                    <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>77</span>
+                                    <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>{{$item->view_count}}</span>
                                 </p>
                             </li>
                         @endforeach
@@ -74,27 +74,29 @@
                     </div>
                 </section>
                 <section class="widget">
-                    <h3 class="title">Tags</h3>
-                    <div class="tagcloud">
-                        <a href="#" class="btn btn-mini">basic</a>
-                        <a href="#" class="btn btn-mini">beginner</a>
-                        <a href="#" class="btn btn-mini">blogging</a>
-                        <a href="#" class="btn btn-mini">colour</a>
-                        <a href="#" class="btn btn-mini">css</a>
-                        <a href="#" class="btn btn-mini">date</a>
-                        <a href="#" class="btn btn-mini">design</a>
-                        <a href="#" class="btn btn-mini">files</a>
-                        <a href="#" class="btn btn-mini">format</a>
-                        <a href="#" class="btn btn-mini">header</a>
-                        <a href="#" class="btn btn-mini">images</a>
-                        <a href="#" class="btn btn-mini">plugins</a>
-                        <a href="#" class="btn btn-mini">setting</a>
-                        <a href="#" class="btn btn-mini">templates</a>
-                        <a href="#" class="btn btn-mini">theme</a>
-                        <a href="#" class="btn btn-mini">time</a>
-                        <a href="#" class="btn btn-mini">videos</a>
-                        <a href="#" class="btn btn-mini">website</a>
-                        <a href="#" class="btn btn-mini">wordpress</a>
+                    <div class="tags-widget">
+                        <h3 class="title">Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="btn btn-primary btn-sm">basic</a>
+                            <a href="#" class="btn btn-primary btn-sm">beginner</a>
+                            <a href="#" class="btn btn-primary btn-sm">blogging</a>
+                            <a href="#" class="btn btn-primary btn-sm">colour</a>
+                            <a href="#" class="btn btn-primary btn-sm">css</a>
+                            <a href="#" class="btn btn-primary btn-sm">date</a>
+                            <a href="#" class="btn btn-primary btn-sm">design</a>
+                            <a href="#" class="btn btn-primary btn-sm">files</a>
+                            <a href="#" class="btn btn-primary btn-sm">format</a>
+                            <a href="#" class="btn btn-primary btn-sm">header</a>
+                            <a href="#" class="btn btn-primary btn-sm">images</a>
+                            <a href="#" class="btn btn-primary btn-sm">plugins</a>
+                            <a href="#" class="btn btn-primary btn-sm">setting</a>
+                            <a href="#" class="btn btn-primary btn-sm">templates</a>
+                            <a href="#" class="btn btn-primary btn-sm">theme</a>
+                            <a href="#" class="btn btn-primary btn-sm">time</a>
+                            <a href="#" class="btn btn-primary btn-sm">videos</a>
+                            <a href="#" class="btn btn-primary btn-sm">website</a>
+                            <a href="#" class="btn btn-primary btn-sm">wordpress</a>
+                        </div>
                     </div>
                 </section>
             </aside>

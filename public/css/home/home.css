@@ -3,6 +3,7 @@
 /* @extend display-flex; */
 
 display-flex,
+.page-area-wrapper .container aside .widget .quick-links-widget ul.menu,
 .page-area-wrapper .container .section-wrapper,
 .page-area-wrapper .container,
 .search-area-wrapper .container,
@@ -15,6 +16,7 @@ display-flex,
 /* @extend list-type-ulli; */
 
 list-type-ulli,
+.page-area-wrapper .container aside .widget .quick-links-widget ul.menu,
 .page-area-wrapper .container .section-wrapper section ul {
   list-style-type: none;
   margin: 0;
@@ -230,7 +232,7 @@ a:hover {
   margin: 0 0 10px;
 }
 
-.page-area-wrapper .container .section-wrapper section ul li p span.like-count {
+.page-area-wrapper .container .section-wrapper section ul li span.like-count {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -243,6 +245,66 @@ a:hover {
 
 .page-area-wrapper .container aside {
   width: 30%;
+}
+
+.page-area-wrapper .container aside .widget .support-widget {
+  border: 1px solid #e9e6c4;
+  padding: 10px 100px 10px 20px;
+  background: #fefbdc url(/images/support.png?ac7f1c888c9d1576eb2708f8ebb2f299) no-repeat 95% 20px;
+  margin-bottom: 20px;
+}
+
+.page-area-wrapper .container aside .widget .support-widget h3.title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #3b4348;
+  line-height: 44px;
+}
+
+.page-area-wrapper .container aside .widget .support-widget p.intro {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #6f7579;
+}
+
+.page-area-wrapper .container aside .widget .quick-links-widget {
+  border: 1px solid #d7d9dc;
+  padding: 10px 15px 15px;
+}
+
+.page-area-wrapper .container aside .widget .quick-links-widget h3.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 44px;
+  color: #3b4348;
+}
+
+.page-area-wrapper .container aside .widget .quick-links-widget ul.menu {
+  flex-wrap: wrap;
+}
+
+.page-area-wrapper .container aside .widget .quick-links-widget ul.menu li {
+  flex-basis: 50%;
+  padding: 5px 5px 5px 20px;
+  background: url(/images/arrow/li-arrow.png) no-repeat 8px 13px;
+}
+
+.page-area-wrapper .container aside .widget .quick-links-widget ul.menu li a {
+  color: #3b4348;
+  text-decoration: none;
+}
+
+.page-area-wrapper .container aside .widget .tags-widget h3.title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #3b4348;
+  line-height: 44px;
+}
+
+.page-area-wrapper .container aside .widget .tags-widget .tag-cloud a {
+  margin: 3px;
+  font-size: 11px;
 }
 
 @media screen and (min-width: 1200px) {
