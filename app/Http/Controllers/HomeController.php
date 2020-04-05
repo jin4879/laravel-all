@@ -17,12 +17,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $popular_board = Board::limit(6)->orderBy('view_count', 'desc')->get();
-        $latest_board = Board::limit(6)->latest('updated_at')->get();
-
-        $comments = Board::find(6)->comments;
-
-
+        $popular_board = Board::orderBy('view_count', 'desc')->paginate(6,['*'],'popular');
+        $latest_board = Board::latest('updated_at')->paginate(6);
 
         return view('home',[
             'latest_board' => $latest_board,
