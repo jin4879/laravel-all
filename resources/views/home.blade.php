@@ -29,7 +29,7 @@
                                     <i class='fas fa-video mr-2'></i><a href="#">{{$item->title}}</a>
                                 </h4>
                                 <p>
-                                    <span class="article-meta">{{\Carbon\Carbon::parse($item->updated_at)->format('d M, Y')}} in</span>
+                                    <span class="article-meta">{{$item->updated_at->format('d M, Y')}} in</span>
                                     <a href="#">Server &amp; Database</a>
                                 </p>
                                 <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>{{$item->view_count}}</span>
@@ -46,7 +46,7 @@
                                     <i class='fas fa-video mr-2'></i><a href="#">{{$item->title}}</a>
                                 </h4>
                                 <p>
-                                    <span class="article-meta">{{\Carbon\Carbon::parse($item->updated_at)->format('d M, Y')}} in</span>
+                                    <span class="article-meta">{{$item->updated_at->format('d M, Y')}} in</span>
                                     <a href="#">Server &amp; Database</a>
                                     <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>{{$item->view_count}}</span>
                                 </p>
