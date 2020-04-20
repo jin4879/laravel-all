@@ -3,6 +3,8 @@ https://github.com/jin4879/laravel-all
 ### Docker with laravel, Nginx, Mysql
 1. install docker-compose
 2. command `docker-compose up -d`
+3. `docker exec -it -u root app bash` `composer update`
+4. change env > DB_HOST=db
 
 ### include
 1. php composer, xdebug, nodejs, npm
