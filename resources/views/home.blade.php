@@ -46,13 +46,14 @@
                                     <i class='fas fa-video mr-2'></i><a href="#">{{$item->title}}</a>
                                 </h4>
                                 <p>
-                                    <span class="article-meta">{{$item->updated_at->format('d M, Y')}} in</span>
+                                    {{-- <span class="article-meta">{{$item->updated_at->format('d M, Y')}} in</span> --}}
                                     <a href="#">Server &amp; Database</a>
                                     <span class="like-count"><i class="fas fa-thumbs-up mr-1"></i>{{$item->view_count}}</span>
                                 </p>
                             </li>
                         @endforeach
                     </ul>
+                    {{ $latest_board->links('pagination.default',['each_side' => 2]) }}
                 </section>
             </div>
            
